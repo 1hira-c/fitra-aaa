@@ -1,0 +1,17 @@
+# 全テキストファイルを LF に正規化（チェックアウト時も LF を維持）
+* text=auto eol=lf
+
+# KiCad ファイルは明示的に LF テキスト扱い
+*.kicad_pro  text eol=lf
+*.kicad_pcb  text eol=lf
+*.kicad_sch  text eol=lf
+*.kicad_prl  text eol=lf
+*.kicad_sym  text eol=lf
+*.kicad_mod  text eol=lf
+fp-lib-table text eol=lf
+sym-lib-table text eol=lf
+
+# 3D モデルはバイナリ扱い（改変防止）
+*.step binary
+*.stp  binary
+*.wrl  binary

@@ -1,0 +1,20 @@
+# VS Code Local History / KiCad 自動バックアップ
+.history/
+*-backups/
+
+# KiCad 生成キャッシュ・バックアップ・ロックファイル
+fp-info-cache
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.bak
+*~
+*.lck
+~*.lck
+
+# 単体再配布が制限されるサードパーティライブラリ（設計ファイルに埋め込み済み。
+# 再編集時は各サイトから再取得すること）
+/libraries/ul_LSM6DSV/
+/libraries/ul_SM03B/
+/libraries/se_NPM2100-QEAA-R7/
+/libraries/se_LSM6DSV16XTR/
+/libraries/se_SM03B-SRSS-TB/
