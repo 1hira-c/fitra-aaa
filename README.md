@@ -1,6 +1,6 @@
 # fitra-aaa
 
-Raytac **AN54LQ-15**（Nordic **nRF54L15** 搭載 BLE モジュール）を中心とした、
+Raytac **AN54LV-15**（Nordic **nRF54L15** 搭載 BLE モジュール）を中心とした、
 **SlimeVR フルボディトラッカー基板**（[Smol Slime](https://docs.slimevr.dev/smol-slimes/index.html) 向け）の
 KiCad 設計プロジェクトです。
 
@@ -8,10 +8,12 @@ KiCad 設計プロジェクトです。
 
 | 機能 | 部品 |
 |------|------|
-| MCU / BLE SoC | Raytac **AN54LQ-15**（Nordic **nRF54L15** 搭載モジュール） |
+| MCU / BLE SoC | Raytac **AN54LV-15**（Nordic **nRF54L15** 搭載モジュール） |
 | 6軸 IMU センサ | STMicroelectronics **LSM6DSV** |
 | 電源管理（PMIC） | Nordic Semiconductor **NPM2100** (QFN) |
-| バッテリ接続 | JST **SM03B** コネクタ |
+| 低周波クロック | Micro Crystal **CM8V-T1A 32.768 kHz** |
+| バッテリ接続 | **VBAT / GND 独立スルーホール端子** |
+| 書き込み / デバッグ | 基板上の **SWD パッド** |
 
 ## Smol Slime / SlimeVR について
 
@@ -55,15 +57,15 @@ KiCad 設計プロジェクトです。
 |------|--------|------|
 | NPM2100（PMIC） | [SnapEDA](https://www.snapeda.com/) | CC-BY-SA 4.0。単体ライブラリの再配布は制限あり。設計の一部としての利用は許諾 |
 | LSM6DSV16XTR（IMU） | [SnapEDA](https://www.snapeda.com/) | 同上 |
-| SM03B-SRSS-TB（コネクタ） | [SnapEDA](https://www.snapeda.com/) | 同上 |
-| AN54LQ（BLE モジュール） | [Raytac](https://www.raytac.com/) | Altium 形式。提供元規約により同梱不可 |
+| CM8V-T1A-32.768KHZ（クリスタル） | [SnapEDA](https://www.snapeda.com/) | 同上 |
+| AN54LV（BLE モジュール） | [Raytac](https://www.raytac.com/) | Altium 形式。提供元規約により同梱不可 |
 
 > 再編集が必要な場合は各提供元から入手し、`libraries/` 配下に配置のうえ
 > `fp-lib-table` / `sym-lib-table` に再登録してください。
 
 ## クレジット / 帰属表示
 
-- **NPM2100** / **LSM6DSV16XTR** / **SM03B-SRSS-TB** のシンボル・フットプリント・3D モデルは
+- **NPM2100** / **LSM6DSV16XTR** / **CM8V-T1A-32.768KHZ** のシンボル・フットプリント・3D モデルは
   [SnapEDA](https://www.snapeda.com/)（CC-BY-SA 4.0）提供のものを設計に組み込んで使用しています。
 
 ## ライセンス
